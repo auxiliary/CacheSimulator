@@ -1,15 +1,9 @@
 class Response:
-    def __init__(self, was_hit, time, data=''):
-        self.was_hit = was_hit
-        self.depth = 1
+    def __init__(self, hit_list, time, data=''):
+        self.hit_list = hit_list
         self.time = time
         self.data = data
 
-    def add_time(self, time):
+    def deepen(self, time):
+        self.hit_list.append(False)
         self.time += time
-
-    def deepen(self):
-        self.depth += 1
-
-    def missed(self):
-        self.was_hit = False

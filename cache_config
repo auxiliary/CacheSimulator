@@ -2,7 +2,7 @@
 
 architecture:
   word_size: 4 #bytes
-  block_size: 4 #words
+  block_size: 16 #bytes
 
 cache_1: #required
   blocks: 32

@@ -9,6 +9,11 @@ cache_1: #required
   associativity: 4
   hit_time: 1 #cycles
 
+cache_2:
+  blocks: 64
+  associativity: 4
+  hit_time: 12
+
 mem: #required
   hit_time: 1000 #cycles
 

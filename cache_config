@@ -1,0 +1,14 @@
+# YAML config file for cache simulator
+
+architecture:
+  word_size: 4 #bytes
+  block_size: 4 #words
+
+cache_1: #required
+  blocks: 32
+  associativity: 4
+  hit_time: 1 #cycles
+
+mem: #required
+  hit_time: 1000 #cycles
+

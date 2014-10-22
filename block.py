@@ -12,6 +12,6 @@ class Block:
     def clean(self):
         self.dirty_bit = False
 
-    def read(self)
+    def read(self):
         print "You read me!"
 

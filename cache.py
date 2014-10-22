@@ -32,15 +32,16 @@ class Cache:
         tag = binary_address[:-(self.block_offset_size+self.index_size)]
 
         try:
-            #CHECK IF MAIN MEMORY
-            #MAIN MEMORY IS ALWAYS A HIT
+            #If next_level exists, this is a cache
+            #Main memory has no next_level, so it always hits
             if self.next_level:
                 #Try to read this block in cache
                 data[index][tag].read()
+
             #Create a response object
             r = response.Response(True, self.hit_time)
 
-        except CacheMissException:
+        except KeyError:
             #Call the next level of cache
             r = self.next_level.read(address)
 
@@ -49,5 +50,3 @@ class Cache:
     def write(self, address, data=''):
         pass
 
-class CacheMissException(Exception):
-    pass

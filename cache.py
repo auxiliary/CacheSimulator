@@ -3,6 +3,7 @@ import pprint
 
 class Cache:
     def __init__(self, name, word_size, block_size, n_blocks, associativity, hit_time, write_time, next_level=None):
+        #Parameters configured by the user
         self.name = name
         self.word_size = word_size
         self.block_size = block_size
@@ -11,13 +12,21 @@ class Cache:
         self.hit_time = hit_time
         self.write_time = write_time
         
+        #Total number of sets in the cache
         self.n_sets = n_blocks / associativity
-
+        
+        #Dictionary that holds the actual cache data
         self.data = {}
-                
+        
+        #Pointer to the next lowest level of memory
+        #Main memory gets the default None value
         self.next_level = next_level
+
+        #Figure out spans to cut the binary addresses into block_offset, index, and tag
         self.block_offset_size = int(math.log(self.block_size, 2))
         self.index_size = int(math.log(self.n_sets, 2))
+
+        #Initialize the data dictionary
         if next_level:
             for i in range(self.n_sets):
                 index = str(bin(i))[2:].zfill(self.index_size)
@@ -26,27 +35,39 @@ class Cache:
 
     def read(self, address, current_step):
         r = None
+        #Check if this is main memory
+        #Main memory is always a hit
         if not self.next_level:
             r = response.Response({self.name:True}, self.hit_time)
         else:
+            #Parse our address to look through this cache
             block_offset, index, tag = self.parse_address(address)
-            in_cache = self.data[index].keys()
 
+            #Get the tags in this set
+            in_cache = self.data[index].keys()
+            
+            #If this tag exists in the set, this is a hit
             if tag in in_cache:
                 r = response.Response({self.name:True}, self.hit_time)
             else:
+                #Read from the next level of memory
                 r = self.next_level.read(address, current_step)
                 r.deepen(self.write_time, self.name)
+
+                #If there's space in this set, add this block to it
                 if len(in_cache) < self.associativity:
                     self.data[index][tag] = block.Block(self.block_size, current_step, False, address)
                 else:
+                    #Find the oldest block and replace it
                     oldest_tag = in_cache[0] 
                     for b in in_cache:
                         if self.data[index][b].last_accessed < self.data[index][oldest_tag].last_accessed:
                             oldest_tag = b
+                    #Write the block back down if it's dirty
                     if self.data[index][oldest_tag].is_dirty():
                         temp = self.next_level.write(self.data[index][oldest_tag].address, True, current_step)
                         r.time += temp.time
+                    #Delete the old block and write the new one
                     del self.data[index][oldest_tag]
                     self.data[index][tag] = block.Block(self.block_size, current_step, False, address)
 

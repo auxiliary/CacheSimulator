@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import yaml, cache, argparse, logging, pprint
-from terminaltables import AsciiTable
+from terminaltables import UnixTable
 
 def main():
     parser = argparse.ArgumentParser(description='Simulate a cache')
@@ -33,27 +33,32 @@ def main():
     trace = trace_file.read().splitlines()
     logger.info('Simulation!')
     simulate(hierarchy, trace, logger)
-    print_memory_layout(hierarchy)
+    for cache in hierarchy:
+        print_cache(hierarchy[cache])
 
-def print_memory_layout(hierarchy):
+def print_cache(cache):
     ways = [""]
     sets = []
-    first_key = hierarchy['cache_1'].data.keys()[0]
-    way_no = 0
-    for way in hierarchy['cache_1'].data[first_key]:
-        ways.append("Way " + str(way_no))
-        way_no += 1
+    if len(cache.data.keys()) > 0:
+        first_key = cache.data.keys()[0]
+        way_no = 0
+        for way in range(cache.associativity):
+            ways.append("Way " + str(way_no))
+            way_no += 1
 
-    sets.append(ways)
-    for s in range(min(5, len(hierarchy['cache_1'].data.keys()))):
-        temp_way = []
-        temp_way.append("Set " + str(s))
-        for w in range(len(ways) - 1):
-            temp_way.append(str(w))
-        sets.append(temp_way)
+        sets.append(ways)
+        for s in range(min(5, len(cache.data.keys()))):
+            temp_way = []
+            temp_way.append("Set " + str(s))
+            for w in range(len(ways) - 1):
+                temp_way.append(str(w))
+            sets.append(temp_way)
 
-    table = AsciiTable(sets)
-    print table.table
+        table = UnixTable(sets)
+        table.title = cache.name
+        table.inner_row_border = True
+        print "\n"
+        print table.table
 
 def simulate(hierarchy, trace, logger):
     responses = []

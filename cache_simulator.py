@@ -133,6 +133,7 @@ def build_cache(configs, name, next_level_cache):
                 configs[name]['associativity'] if (name != 'mem') else -1,
                 configs[name]['hit_time'],
                 configs[name]['hit_time'],
+                configs['architecture']['write_back'],
                 next_level_cache)
 
 

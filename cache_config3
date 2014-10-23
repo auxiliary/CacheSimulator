@@ -3,17 +3,12 @@
 architecture:
   word_size: 4 #bytes
   block_size: 4 #bytes
-  write_back: false
+  write_back: true
 
 cache_1: #required
   blocks: 4
   associativity: 2
   hit_time: 1 #cycles
-
-cache_2: 
-  blocks: 16
-  associativity: 2
-  hit_time: 12
 
 mem: #required
   hit_time: 1000 #cycles

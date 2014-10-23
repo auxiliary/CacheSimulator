@@ -64,10 +64,11 @@ class Cache:
                     for b in in_cache:
                         if self.data[index][b].last_accessed < self.data[index][oldest_tag].last_accessed:
                             oldest_tag = b
-                    #Write the block back down if it's dirty
-                    if self.data[index][oldest_tag].is_dirty():
-                        temp = self.next_level.write(self.data[index][oldest_tag].address, True, current_step)
-                        r.time += temp.time
+                    #Write the block back down if it's dirty and we're using write back
+                    if self.write_back:
+                        if self.data[index][oldest_tag].is_dirty():
+                            temp = self.next_level.write(self.data[index][oldest_tag].address, True, current_step)
+                            r.time += temp.time
                     #Delete the old block and write the new one
                     del self.data[index][oldest_tag]
                     self.data[index][tag] = block.Block(self.block_size, current_step, False, address)
@@ -86,16 +87,24 @@ class Cache:
             in_cache = self.data[index].keys()
 
             if tag in in_cache:
+                #Set dirty bit to true if this block was in cache
+                self.data[index][tag].write(current_step)
+
                 if self.write_back:
-                    #Set dirty bit to true if this block was in cache
-                    self.data[index][tag].write(current_step)
                     r = response.Response({self.name:True}, self.write_time)
                 else:
+                    #Send to next level cache and deepen results if we have write through
+                    r = self.next_level.write(address, from_cpu, current_step)
+                    r.deepen(self.write_time, self.name)
             
             elif len(in_cache) < self.associativity:
                 #If there is space in this set, create a new block and set its dirty bit to true if this write is coming from the CPU
                 self.data[index][tag] = block.Block(self.block_size, current_step, from_cpu, address)
-                r = response.Response({self.name:False}, self.write_time)
+                if self.write_back:
+                    r = response.Response({self.name:False}, self.write_time)
+                else:
+                    r = self.next_level.write(address, from_cpu, current_step)
+                    r.deepen(self.write_time, self.name)
             
             elif len(in_cache) == self.associativity:
                 #If this set is full, find the oldest block, write it back if it's dirty, and replace it
@@ -103,16 +112,18 @@ class Cache:
                 for b in in_cache:
                     if self.data[index][b].last_accessed < self.data[index][oldest_tag].last_accessed:
                         oldest_tag = b
-                if self.data[index][oldest_tag].is_dirty():
-                    r = self.next_level.write(self.data[index][oldest_tag].address, from_cpu, current_step)
+                if self.write_back:
+                    if self.data[index][oldest_tag].is_dirty():
+                        r = self.next_level.write(self.data[index][oldest_tag].address, from_cpu, current_step)
+                        r.deepen(self.write_time, self.name)
+                else:
+                    r = self.next_level.write(address, from_cpu, current_step)
                     r.deepen(self.write_time, self.name)
                 del self.data[index][oldest_tag]
+
                 self.data[index][tag] = block.Block(self.block_size, current_step, from_cpu, address)
                 if not r:
                     r = response.Response({self.name:False}, self.write_time)
-            else:
-                pprint.pprint(len(in_cache))
-                pprint.pprint(self.data)
 
         return r
 

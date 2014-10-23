@@ -6,9 +6,14 @@ architecture:
   write_back: true
 
 cache_1: #required
-  blocks: 256
+  blocks: 16
   associativity: 2
   hit_time: 1 #cycles
+
+cache_2:
+  blocks: 32
+  associativity: 4
+  hit_time: 12
 
 mem: #required
   hit_time: 1000 #cycles

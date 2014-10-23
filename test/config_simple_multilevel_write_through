@@ -3,15 +3,15 @@
 architecture:
   word_size: 4 #bytes
   block_size: 16 #bytes
-  write_back: true
+  write_back: false
 
 cache_1: #required
-  blocks: 32
-  associativity: 4
+  blocks: 16
+  associativity: 2
   hit_time: 1 #cycles
 
 cache_2:
-  blocks: 64
+  blocks: 32
   associativity: 4
   hit_time: 12
 

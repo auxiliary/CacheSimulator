@@ -2,7 +2,7 @@ import math, block, response
 import pprint
 
 class Cache:
-    def __init__(self, name, word_size, block_size, n_blocks, associativity, hit_time, write_time, write_back, next_level=None):
+    def __init__(self, name, word_size, block_size, n_blocks, associativity, hit_time, write_time, write_back, logger, next_level=None):
         #Parameters configured by the user
         self.name = name
         self.word_size = word_size
@@ -12,6 +12,7 @@ class Cache:
         self.hit_time = hit_time
         self.write_time = write_time
         self.write_back = write_back
+        self.logger = logger
         
         #Total number of sets in the cache
         self.n_sets = n_blocks / associativity
@@ -31,6 +32,8 @@ class Cache:
         if next_level:
             for i in range(self.n_sets):
                 index = str(bin(i))[2:].zfill(self.index_size)
+                if index == '':
+                    index = '0'
                 self.data[index] = {}   #Create a dictionary of blocks for each set
 
 
@@ -67,6 +70,7 @@ class Cache:
                     #Write the block back down if it's dirty and we're using write back
                     if self.write_back:
                         if self.data[index][oldest_tag].is_dirty():
+                            self.logger.info('\tWriting back block ' + address + ' to ' + self.next_level.name)
                             temp = self.next_level.write(self.data[index][oldest_tag].address, True, current_step)
                             r.time += temp.time
                     #Delete the old block and write the new one
@@ -94,6 +98,7 @@ class Cache:
                     r = response.Response({self.name:True}, self.write_time)
                 else:
                     #Send to next level cache and deepen results if we have write through
+                    self.logger.info('\tWriting through block ' + address + ' to ' + self.next_level.name)
                     r = self.next_level.write(address, from_cpu, current_step)
                     r.deepen(self.write_time, self.name)
             
@@ -103,6 +108,7 @@ class Cache:
                 if self.write_back:
                     r = response.Response({self.name:False}, self.write_time)
                 else:
+                    self.logger.info('\tWriting through block ' + address + ' to ' + self.next_level.name)
                     r = self.next_level.write(address, from_cpu, current_step)
                     r.deepen(self.write_time, self.name)
             
@@ -114,9 +120,11 @@ class Cache:
                         oldest_tag = b
                 if self.write_back:
                     if self.data[index][oldest_tag].is_dirty():
+                        self.logger.info('\tWriting back block ' + address + ' to ' + self.next_level.name)
                         r = self.next_level.write(self.data[index][oldest_tag].address, from_cpu, current_step)
                         r.deepen(self.write_time, self.name)
                 else:
+                    self.logger.info('\tWriting through block ' + address + ' to ' + self.next_level.name)
                     r = self.next_level.write(address, from_cpu, current_step)
                     r.deepen(self.write_time, self.name)
                 del self.data[index][oldest_tag]
@@ -135,6 +143,8 @@ class Cache:
 
         block_offset = binary_address[-self.block_offset_size:]
         index = binary_address[-(self.block_offset_size+self.index_size):-self.block_offset_size]
+        if index == '':
+            index = '0'
         tag = binary_address[:-(self.block_offset_size+self.index_size)]
         return (block_offset, index, tag)
 

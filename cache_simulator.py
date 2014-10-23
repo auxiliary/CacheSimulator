@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import yaml, cache, argparse, logging, pprint
+from terminaltables import AsciiTable
 
 def main():
     parser = argparse.ArgumentParser(description='Simulate a cache')
@@ -32,7 +33,27 @@ def main():
     trace = trace_file.read().splitlines()
     logger.info('Simulation!')
     simulate(hierarchy, trace, logger)
+    print_memory_layout(hierarchy)
 
+def print_memory_layout(hierarchy):
+    ways = [""]
+    sets = []
+    first_key = hierarchy['cache_1'].data.keys()[0]
+    way_no = 0
+    for way in hierarchy['cache_1'].data[first_key]:
+        ways.append("Way " + str(way_no))
+        way_no += 1
+
+    sets.append(ways)
+    for s in range(min(5, len(hierarchy['cache_1'].data.keys()))):
+        temp_way = []
+        temp_way.append("Set " + str(s))
+        for w in range(len(ways) - 1):
+            temp_way.append(str(w))
+        sets.append(temp_way)
+
+    table = AsciiTable(sets)
+    print table.table
 
 def simulate(hierarchy, trace, logger):
     responses = []
@@ -74,8 +95,11 @@ def compute_amat(level, responses, logger, results={}):
                 if r.hit_list[level.name] == False:
                     n_miss += 1
 
-        miss_rate = float(n_miss)/n_access
-        results[level.name] = level.hit_time + miss_rate * compute_amat(level.next_level, responses, logger)[level.next_level.name] #wat
+        if n_access > 0:
+            miss_rate = float(n_miss)/n_access
+            results[level.name] = level.hit_time + miss_rate * compute_amat(level.next_level, responses, logger)[level.next_level.name] #wat
+        else:
+            results[level.name] = 0 * compute_amat(level.next_level, responses, logger)[level.next_level.name] #trust me, this is good
     return results
 
 

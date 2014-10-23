@@ -3,15 +3,17 @@ CacheSimulator
 
 A cache simulator in Python for CS 530
 
-# Requirements
+### Requirements
 
 CacheSimulator needs two extra Python modules
+
     pyyaml and terminaltables
 
 These can both be installed using pip:
+
     sudo pip install pyyaml/terminaltables
 
-# Goals
+### Goals
 
 This simulator will create a memory heirarchy from a YAML configuration file
 and calculate the AMAT for a given tracefile.

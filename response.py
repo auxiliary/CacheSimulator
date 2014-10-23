@@ -4,6 +4,6 @@ class Response:
         self.time = time
         self.data = data
 
-    def deepen(self, time):
-        self.hit_list.append(False)
+    def deepen(self, time, name):
+        self.hit_list[name] = False
         self.time += time

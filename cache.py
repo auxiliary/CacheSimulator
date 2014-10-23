@@ -2,7 +2,7 @@ import math, block, response
 import pprint
 
 class Cache:
-    def __init__(self, name, word_size, block_size, n_blocks, associativity, hit_time, write_time, next_level=None):
+    def __init__(self, name, word_size, block_size, n_blocks, associativity, hit_time, write_time, write_back, next_level=None):
         self.name = name
         self.word_size = word_size
         self.block_size = block_size
@@ -10,6 +10,7 @@ class Cache:
         self.associativity = associativity
         self.hit_time = hit_time
         self.write_time = write_time
+        self.write_back = write_back
         
         self.n_sets = n_blocks / associativity
 
@@ -64,9 +65,11 @@ class Cache:
             in_cache = self.data[index].keys()
 
             if tag in in_cache:
-                #Set dirty bit to true if this block was in cache
-                self.data[index][tag].write(current_step)
-                r = response.Response({self.name:True}, self.write_time)
+                if self.write_back:
+                    #Set dirty bit to true if this block was in cache
+                    self.data[index][tag].write(current_step)
+                    r = response.Response({self.name:True}, self.write_time)
+                else:
             
             elif len(in_cache) < self.associativity:
                 #If there is space in this set, create a new block and set its dirty bit to true if this write is coming from the CPU

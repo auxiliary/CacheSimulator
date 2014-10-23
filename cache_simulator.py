@@ -117,6 +117,12 @@ def simulate(hierarchy, trace, logger):
 def analyze_results(hierarchy, responses, logger):
     n_instructions = len(responses)
 
+    total_time = 0
+    for r in responses:
+        total_time += r.time
+    logger.info('\nNumber of instructions: ' + str(n_instructions))
+    logger.info('\nTotal cycles taken: ' + str(total_time))
+
     amat = compute_amat(hierarchy['cache_1'], responses, logger)
     logger.info('\nAMATs:\n'+pprint.pformat(amat))
 

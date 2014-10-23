@@ -16,6 +16,8 @@ The memory heirarchy is configurable with the following features:
   - Hit time
   - Write time
 - Optional L2 and L3 caches
+- Simulate write back and write through
+- Pretty print the cache layouts
 
 Still a work in progress!
 

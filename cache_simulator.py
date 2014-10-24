@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import yaml, cache, argparse, logging, pprint
+import yaml, cache, argparse, logging, pprint, colorer
 from terminaltables import UnixTable
 
 def main():
@@ -101,13 +101,13 @@ def simulate(hierarchy, trace, logger):
         if op == 'R':
             logger.info(str(current_step) + ':\tReading ' + address)
             r = l1.read(address, current_step)
-            logger.info('\thit_list: ' + pprint.pformat(r.hit_list) + '\ttime: ' + str(r.time) + '\n')
+            logger.warning('\thit_list: ' + pprint.pformat(r.hit_list) + '\ttime: ' + str(r.time) + '\n')
             responses.append(r)
             #Do something with response
         elif op == 'W':
             logger.info(str(current_step) + ':\tWriting ' + address)
             r = l1.write(address, True, current_step)
-            logger.info('\thit_list: ' + pprint.pformat(r.hit_list) + '\ttime: ' + str(r.time) + '\n')
+            logger.warning('\thit_list: ' + pprint.pformat(r.hit_list) + '\ttime: ' + str(r.time) + '\n')
             responses.append(r)
             #Do something with response
         else:

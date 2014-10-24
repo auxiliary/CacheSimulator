@@ -10,6 +10,7 @@ def main():
     parser.add_argument('-t', '--trace-file', help='Tracefile containing instructions', required=True)
     parser.add_argument('-l', '--log-file', help='Log file name', required=False)
     parser.add_argument('-p', '--pretty', help='Use pretty colors', required=False, action='store_true')
+    parser.add_argument('-d', '--draw-cache', help='Draw cache layouts', required=False, action='store_true')
     arguments = vars(parser.parse_args())
     
     if arguments['pretty']:
@@ -43,12 +44,14 @@ def main():
     logger.info('Loading tracefile...')
     trace_file = open(arguments['trace_file'])
     trace = trace_file.read().splitlines()
+    trace = [item for item in trace if not item.startswith('#')]
     logger.info('Loaded tracefile ' + arguments['trace_file'])
     logger.info('Simulation!')
     simulate(hierarchy, trace, logger)
-    for cache in hierarchy:
-        if hierarchy[cache].next_level:
-            print_cache(hierarchy[cache])
+    if arguments['draw_cache']:
+        for cache in hierarchy:
+            if hierarchy[cache].next_level:
+                print_cache(hierarchy[cache])
 
 #Print the contents of a cache as a table
 #If the table is too long, it will print the first few sets,
@@ -135,7 +138,7 @@ def analyze_results(hierarchy, responses, logger):
     for r in responses:
         total_time += r.time
     logger.info('\nNumber of instructions: ' + str(n_instructions))
-    logger.info('\nTotal cycles taken: ' + str(total_time))
+    logger.info('\nTotal cycles taken: ' + str(total_time) + '\n')
 
     amat = compute_amat(hierarchy['cache_1'], responses, logger)
     logger.info('\nAMATs:\n'+pprint.pformat(amat))
@@ -158,6 +161,11 @@ def compute_amat(level, responses, logger, results={}):
             results[level.name] = level.hit_time + miss_rate * compute_amat(level.next_level, responses, logger)[level.next_level.name] #wat
         else:
             results[level.name] = 0 * compute_amat(level.next_level, responses, logger)[level.next_level.name] #trust me, this is good
+
+        logger.info(level.name)
+        logger.info('\tNumber of accesses: ' + str(n_access))
+        logger.info('\tNumber of hits: ' + str(n_access - n_miss))
+        logger.info('\tNumber of misses: ' + str(n_miss))
     return results
 
 

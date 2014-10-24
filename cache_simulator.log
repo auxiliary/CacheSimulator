@@ -1,959 +1,118 @@
 [32mLoading config...[0m
 [32mMemory hierarchy built.[0m
 [32mLoading tracefile...[0m
+[32mLoaded tracefile ./traces/simple_trace.txt[0m
 [32mSimulation![0m
-[32m0:	Reading 0041f7a0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m0:	Reading 00000000[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m1:	Reading 13f5e2c0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m1:	Reading 00000010[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m2:	Reading 05e78900[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m2:	Reading 00000020[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m3:	Reading 004758a0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m3:	Reading 00000030[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m4:	Writing 31348900[0m
-[33m	hit_list: {'cache_1': False}	time: 1
+[32m4:	Reading 00000040[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m5:	Reading 004a30e0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m5:	Reading 00000050[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m6:	Reading 0700ff05[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m6:	Reading 00000060[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m7:	Reading 0049e120[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m7:	Reading 00000070[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m8:	Reading 004c25f8[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m8:	Reading 00000080[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m9:	Reading 004c2600[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m9:	Reading 00000090[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m10:	Writing 3305a5e0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
+[32m10:	Reading 000000A0[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m11:	Writing 05e06600[0m
-[33m	hit_list: {'cache_1': False}	time: 1
+[32m11:	Reading 000000B0[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m12:	Reading 0044e4f8[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m12:	Reading 000000C0[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m13:	Reading 0044e500[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m13:	Reading 000000D0[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m14:	Reading 0044e520[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m14:	Reading 000000E0[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m15:	Reading 0700ff10[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m15:	Reading 000000F0[0m
+[33m	hit_list: {'cache_1': False, 'cache_2': False, 'mem': True}	time: 1013
 [0m
-[32m16:	Writing 2f6965a0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m17:	Reading 0044e5c0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m18:	Reading 0044e5e0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m19:	Reading 0044e621[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m20:	Writing 31dae640[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m21:	Reading 00414f20[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m22:	Writing 05f7cf20[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m23:	Reading 004bcfc0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m24:	Writing 2774cfc0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m25:	Reading 004696a0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m26:	Reading 00446460[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m27:	Writing 31f92120[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m28:	Reading 00496ec0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m29:	Reading 004a0c00[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m30:	Reading 0049d640[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m31:	Reading 004f3df0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m32:	Reading 0700ff10[0m
+[32m16:	Reading 00000000[0m
 [33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m33:	Writing 3d729820[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m34:	Reading 00496fb0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m35:	Reading 00496fc0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m36:	Writing 21dd6fc0[0m
-[32m	Writing back block 21dd6fc0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m37:	Reading 004a9860[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m38:	Reading 004aa4d8[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m39:	Reading 004aa4e0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m40:	Reading 004bd000[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m41:	Reading 044b71e0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m42:	Reading 0700ff10[0m
+[32m17:	Reading 00000001[0m
 [33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m43:	Reading 04497780[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m44:	Reading 004977a0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m45:	Reading 12151660[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m46:	Reading 004b3a80[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m47:	Writing 05e9ba80[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m48:	Writing 31602880[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m49:	Reading 004b39c0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m50:	Writing 33b1b9c0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m51:	Reading 004b0ba0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m52:	Reading 004953b0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m53:	Reading 004bd080[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m54:	Writing 0785d080[0m
-[32m	Writing back block 0785d080 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m55:	Writing 05ae74a2[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m56:	Reading 004b3900[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m57:	Writing 32f53900[0m
-[32m	Writing back block 32f53900 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m58:	Reading 00497738[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m59:	Writing 31a2f720[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m60:	Reading 00497740[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m61:	Writing 3a34f740[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m62:	Reading 07967018[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m63:	Reading 07967d00[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m64:	Writing 303f18c3[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m65:	Reading 08848548[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m66:	Reading 08848560[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m67:	Reading 0702ff10[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m68:	Reading 088487e0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m69:	Reading 088c1a20[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m70:	Reading 088c1a60[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m71:	Writing 06379a60[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m72:	Reading 088c1aa0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m73:	Reading 088c1ac0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m74:	Reading 0f8cfef0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m75:	Writing 303f1ae0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m76:	Reading 079911b0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m77:	Writing 30b111a0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m78:	Reading 079911c0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m79:	Reading 00470888[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m80:	Writing 31b10880[0m
-[32m	Writing back block 31b10880 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m81:	Reading 00497920[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m82:	Reading 00497940[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m83:	Writing 31a2f940[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m84:	Reading 00497960[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m85:	Reading 00497980[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m86:	Writing 31187980[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m87:	Reading 004979a0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m88:	Writing 26c1f9a0[0m
-[32m	Writing back block 26c1f9a0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m89:	Writing 3272c040[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m90:	Writing 33b1b960[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m91:	Reading 004b3980[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m92:	Reading 004979c0[0m
-[32m	Writing back block 004979c0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
-[0m
-[32m93:	Reading 004979e0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m94:	Reading 00497a00[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m95:	Reading 00497a40[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m96:	Writing 0700ff40[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m97:	Writing 198857a5[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m98:	Reading 0048d7a0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m99:	Reading 0048d7c0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m100:	Reading 0703ff1d[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m101:	Writing 32594380[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m102:	Reading 00497a80[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m103:	Reading 0700ff10[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m104:	Reading 0749ffd0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m105:	Reading 00497ae0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m106:	Writing 32dcfae0[0m
-[32m	Writing back block 32dcfae0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m107:	Reading 004af5f0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m108:	Reading 004af600[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m109:	Writing 0cac7600[0m
-[32m	Writing back block 0cac7600 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m110:	Reading 004af620[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m111:	Writing 32dcf620[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m112:	Reading 004af640[0m
-[32m	Writing back block 004af640 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
-[0m
-[32m113:	Reading 004af660[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m114:	Reading 004af680[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m115:	Reading 074afeb0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m116:	Reading 00495558[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m117:	Reading 00495560[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m118:	Writing 19885560[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m119:	Reading 00495580[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m120:	Reading 004955a0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m121:	Reading 004181d8[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m122:	Reading 00418200[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m123:	Reading 0741ce20[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m124:	Reading 00418240[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m125:	Writing 314b02a0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m126:	Reading 004182e0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m127:	Reading 00418260[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m128:	Writing 31a50260[0m
-[32m	Writing back block 31a50260 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m129:	Reading 05e7e2d0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m130:	Reading 00472a08[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m131:	Writing 2ff72a00[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m132:	Reading 00466fa8[0m
-[32m	Writing back block 00466fa8 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
-[0m
-[32m133:	Reading 00467000[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m134:	Reading 00467020[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m135:	Reading 05ae76c8[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m136:	Reading 00467180[0m
-[32m	Writing back block 00467180 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
-[0m
-[32m137:	Reading 004671a0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m138:	Reading 05afc668[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m139:	Writing 2574c660[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m140:	Reading 05ae76e1[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m141:	Reading 05ae7700[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m142:	Reading 00418280[0m
-[32m	Writing back block 00418280 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
-[0m
-[32m143:	Reading 00452150[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m144:	Reading 00452160[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m145:	Writing 06342140[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m146:	Writing 3305a160[0m
-[32m	Writing back block 3305a160 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m147:	Reading 00452180[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m148:	Reading 004521a0[0m
-[32m	Writing back block 004521a0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
-[0m
-[32m149:	Reading 004521c0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m150:	Writing 316021e0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m151:	Reading 0701ff10[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m152:	Reading 00452220[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m153:	Writing 31f92220[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m154:	Reading 00452260[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m155:	Reading 00452280[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m156:	Reading 0703ff18[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m157:	Writing 2574cc80[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m158:	Reading 004955e0[0m
-[32m	Writing back block 004955e0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
-[0m
-[32m159:	Reading 004af6c0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m160:	Reading 0049ca20[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m161:	Writing 0745fe20[0m
-[32m	Writing back block 0745fe20 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m162:	Reading 0049ca40[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m163:	Reading 0703ff10[0m
+[32m18:	Reading 00000002[0m
 [33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m164:	Writing 303f1620[0m
-[33m	hit_list: {'cache_1': False}	time: 1
+[32m19:	Reading 00000003[0m
+[33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m165:	Writing 31a2f1e0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
+[32m20:	Reading 00000010[0m
+[33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m166:	Reading 11d5f200[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m21:	Reading 00000014[0m
+[33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m167:	Reading 121dd6c0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m22:	Reading 00000018[0m
+[33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m168:	Reading 121ddfa0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m23:	Reading 0000001C[0m
+[33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m169:	Writing 0608dfa0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
+[32m24:	Reading 00000020[0m
+[33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m170:	Reading 121ddfe0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m25:	Reading 00000024[0m
+[33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m171:	Writing 30afdfe0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
+[32m26:	Reading 00000028[0m
+[33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m172:	Reading 11f5e000[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m27:	Reading 0000002C[0m
+[33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m173:	Reading 11f5e020[0m
-[32m	Writing back block 11f5e020 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
+[32m28:	Reading 00000030[0m
+[33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m174:	Reading 13f5e040[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m29:	Reading 00000034[0m
+[33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m175:	Reading 121ddf00[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
+[32m30:	Reading 00000038[0m
+[33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m176:	Reading 121ddf20[0m
-[32m	Writing back block 121ddf20 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
+[32m31:	Reading 0000003C[0m
+[33m	hit_list: {'cache_1': True}	time: 1
 [0m
-[32m177:	Reading 121ddf40[0m
-[32m	Writing back block 121ddf40 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
-[0m
-[32m178:	Reading 121ddf60[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m179:	Reading 121ddf80[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m180:	Reading 171ddf08[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m181:	Reading 00420ce8[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m182:	Writing 062f0ce0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m183:	Writing 314b0d20[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m184:	Reading 00420d40[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m185:	Writing 27a5fd40[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m186:	Reading 0041e9c8[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m187:	Reading 0041e9e0[0m
-[32m	Writing back block 0041e9e0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
-[0m
-[32m188:	Writing 27fb69e0[0m
-[32m	Writing back block 27fb69e0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m189:	Reading 0041ea00[0m
-[32m	Writing back block 0041ea00 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
-[0m
-[32m190:	Writing 27fb6a00[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m191:	Reading 00420d60[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m192:	Reading 00420d80[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m193:	Writing 31348d60[0m
-[32m	Writing back block 31348d60 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m194:	Reading 0700ff10[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m195:	Writing 258c62e0[0m
-[32m	Writing back block 258c62e0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m196:	Reading 0042e300[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m197:	Reading 05b99b60[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m198:	Reading 05b99b50[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m199:	Reading 0042e320[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m200:	Reading 00402500[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m201:	Reading 0042e340[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m202:	Writing 2f696340[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m203:	Reading 00420bc0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m204:	Reading 00420be0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m205:	Reading 00420c00[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m206:	Reading 121dd630[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m207:	Reading 11f5e060[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m208:	Reading 11f5e160[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m209:	Writing 31f7e140[0m
-[32m	Writing back block 31f7e140 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m210:	Reading 17f5e580[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m211:	Reading 11f5e1a0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m212:	Reading 11d5f0d8[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m213:	Reading 11f5e080[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m214:	Reading 11f5e0a0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m215:	Writing 2f6962e1[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m216:	Reading 11f5e300[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m217:	Reading 00400740[0m
-[32m	Writing back block 00400740 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
-[0m
-[32m218:	Reading 00400760[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m219:	Reading 00400780[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m220:	Reading 13f5e0c0[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m221:	Reading 11f5e120[0m
-[32m	Writing back block 11f5e120 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 2001
-[0m
-[32m222:	Writing 2f6960e0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m223:	Reading 17f5ed10[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m224:	Writing 003fe120[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m225:	Writing 31c68780[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m226:	Writing 26c1fae0[0m
-[32m	Writing back block 26c1fae0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m227:	Writing 26c1fb00[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m228:	Writing 3259efa0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m229:	Writing 0047efa0[0m
-[32m	Writing back block 0047efa0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m230:	Writing 066b8000[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m231:	Writing 31ca0000[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m232:	Writing 32098020[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m233:	Writing 320980a0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m234:	Writing 0041ff80[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m235:	Writing 314b00c0[0m
-[32m	Writing back block 314b00c0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m236:	Writing 320980e0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m237:	Writing 31c68160[0m
-[32m	Writing back block 31c68160 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m238:	Writing 31a50280[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m239:	Writing 314b02c0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m240:	Writing 314b02e0[0m
-[32m	Writing back block 314b02e0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m241:	Writing 314b0340[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m242:	Writing 314b0360[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m243:	Writing 2e3c8380[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m244:	Writing 314b0380[0m
-[32m	Writing back block 314b0380 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m245:	Writing 231383a0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m246:	Writing 314bffc0[0m
-[32m	Writing back block 314bffc0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m247:	Writing 06bb83e0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m248:	Writing 2414ffc0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m249:	Writing 23138420[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m250:	Writing 31a50420[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m251:	Writing 32098480[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m252:	Writing 31a504c0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m253:	Writing 2001ff00[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m254:	Writing 314b0520[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m255:	Writing 314b0540[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m256:	Writing 31c68560[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m257:	Writing 31c68580[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m258:	Writing 32098580[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m259:	Writing 2313cd60[0m
-[32m	Writing back block 2313cd60 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m260:	Writing 314b05c0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m261:	Writing 314b0600[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m262:	Writing 05b00620[0m
-[32m	Writing back block 05b00620 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m263:	Writing 31c68640[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m264:	Writing 31a50660[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m265:	Writing 314b0680[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m266:	Writing 31b10660[0m
-[32m	Writing back block 31b10660 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m267:	Writing 05b006a0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m268:	Writing 314b06a0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m269:	Writing 31b10700[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m270:	Writing 314b0740[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m271:	Writing 314b0760[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m272:	Writing 31b10740[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m273:	Writing 31308760[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m274:	Writing 31b107a0[0m
-[32m	Writing back block 31b107a0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m275:	Writing 31b107c0[0m
-[32m	Writing back block 31b107c0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m276:	Writing 31b10800[0m
-[32m	Writing back block 31b10800 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m277:	Writing 31b10820[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m278:	Writing 31a508a0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m279:	Writing 31c688c0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m280:	Writing 05e788e0[0m
-[32m	Writing back block 05e788e0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m281:	Writing 31b10900[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m282:	Writing 23138900[0m
-[32m	Writing back block 23138900 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m283:	Writing 05e78940[0m
-[32m	Writing back block 05e78940 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m284:	Writing 314b0960[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m285:	Writing 31b10980[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m286:	Writing 314b09a0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m287:	Writing 31a509c0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m288:	Writing 31b109c0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m289:	Writing 314bce00[0m
-[32m	Writing back block 314bce00 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m290:	Writing 31b109e0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m291:	Writing 31b10a00[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m292:	Writing 231389e0[0m
-[32m	Writing back block 231389e0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m293:	Writing 31a50a20[0m
-[32m	Writing back block 31a50a20 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m294:	Writing 31a50a40[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m295:	Writing 00470a20[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m296:	Writing 06338ac0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m297:	Writing 31a5fee0[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
-[32m298:	Writing 314b0ac0[0m
-[32m	Writing back block 314b0ac0 to mem[0m
-[33m	hit_list: {'cache_1': False, 'mem': True}	time: 1001
-[0m
-[32m299:	Writing 23138b00[0m
-[33m	hit_list: {'cache_1': False}	time: 1
-[0m
+[32mSimulation complete[0m
 [32m
-Number of instructions: 300[0m
+Number of instructions: 32[0m
 [32m
-Total cycles taken: 209300[0m
+Total cycles taken: 16224
+[0m
+[32mcache_2[0m
+[32m	Number of accesses: 16[0m
+[32m	Number of hits: 0[0m
+[32m	Number of misses: 16[0m
+[32mcache_1[0m
+[32m	Number of accesses: 32[0m
+[32m	Number of hits: 16[0m
+[32m	Number of misses: 16[0m
 [32m
 AMATs:
-{'cache_1': 991.0, 'mem': 1000}[0m
+{'cache_1': 507.0, 'cache_2': 1012.0, 'mem': 1000}[0m

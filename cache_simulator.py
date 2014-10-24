@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import yaml, cache, argparse, logging, pprint, colorer
+import yaml, cache, argparse, logging, pprint
 from terminaltables import UnixTable
 
 def main():
@@ -8,7 +8,11 @@ def main():
     parser.add_argument('-c','--config-file', help='Configuration file for the memory heirarchy', required=True)
     parser.add_argument('-t', '--trace-file', help='Tracefile containing instructions', required=True)
     parser.add_argument('-l', '--log-file', help='Log file name', required=False)
+    parser.add_argument('-p', '--pretty', help='User pretty colors', required=False, action='store_true')
     arguments = vars(parser.parse_args())
+    
+    if arguments['pretty']:
+        import colorer
 
     log_filename = 'cache_simulator.log'
     if arguments['log_file']:

@@ -9,7 +9,7 @@ def main():
     parser.add_argument('-c','--config-file', help='Configuration file for the memory heirarchy', required=True)
     parser.add_argument('-t', '--trace-file', help='Tracefile containing instructions', required=True)
     parser.add_argument('-l', '--log-file', help='Log file name', required=False)
-    parser.add_argument('-p', '--pretty', help='User pretty colors', required=False, action='store_true')
+    parser.add_argument('-p', '--pretty', help='Use pretty colors', required=False, action='store_true')
     arguments = vars(parser.parse_args())
     
     if arguments['pretty']:

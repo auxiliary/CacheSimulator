@@ -4,6 +4,7 @@ import yaml, cache, argparse, logging, pprint
 from terminaltables import UnixTable
 
 def main():
+    #Set up our arguments
     parser = argparse.ArgumentParser(description='Simulate a cache')
     parser.add_argument('-c','--config-file', help='Configuration file for the memory heirarchy', required=True)
     parser.add_argument('-t', '--trace-file', help='Tracefile containing instructions', required=True)
@@ -39,17 +40,19 @@ def main():
     hierarchy = build_hierarchy(configs, logger)
     logger.info('Memory hierarchy built.')
 
-    #print l1.name+': a', str(l1.associativity)+'-way set associative cache'
-
     logger.info('Loading tracefile...')
     trace_file = open(arguments['trace_file'])
     trace = trace_file.read().splitlines()
+    logger.info('Loaded tracefile ' + arguments['trace_file'])
     logger.info('Simulation!')
     simulate(hierarchy, trace, logger)
     for cache in hierarchy:
         if hierarchy[cache].next_level:
             print_cache(hierarchy[cache])
 
+#Print the contents of a cache as a table
+#If the table is too long, it will print the first few sets,
+#break, and then print the last set
 def print_cache(cache):
     table_size = 5
     ways = [""]
@@ -58,10 +61,14 @@ def print_cache(cache):
     if len(cache.data.keys()) > 0:
         first_key = cache.data.keys()[0]
         way_no = 0
+        
+        #Label the columns
         for way in range(cache.associativity):
             ways.append("Way " + str(way_no))
             way_no += 1
-
+        
+        #Print either all the sets if the cache is small, or just a few
+        #sets and then the last set
         sets.append(ways)
         if len(set_indexes) > table_size + 4 - 1:
             for s in range(min(table_size, len(set_indexes) - 4)):
@@ -96,26 +103,29 @@ def print_cache(cache):
         print "\n"
         print table.table
 
+#Loop through the instructions in the tracefile and use
+#the given memory hierarchy to find AMAT
 def simulate(hierarchy, trace, logger):
     responses = []
     l1 = hierarchy['cache_1']
     for current_step in range(len(trace)):
         instruction = trace[current_step]
         address, op = instruction.split()
+        #Call read for this address on our memory hierarchy
         if op == 'R':
             logger.info(str(current_step) + ':\tReading ' + address)
             r = l1.read(address, current_step)
             logger.warning('\thit_list: ' + pprint.pformat(r.hit_list) + '\ttime: ' + str(r.time) + '\n')
             responses.append(r)
-            #Do something with response
+        #Call write
         elif op == 'W':
             logger.info(str(current_step) + ':\tWriting ' + address)
             r = l1.write(address, True, current_step)
             logger.warning('\thit_list: ' + pprint.pformat(r.hit_list) + '\ttime: ' + str(r.time) + '\n')
             responses.append(r)
-            #Do something with response
         else:
             raise InvalidOpError
+    logger.info('Simulation complete')
     analyze_results(hierarchy, responses, logger)
 
 def analyze_results(hierarchy, responses, logger):

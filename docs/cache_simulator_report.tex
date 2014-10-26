@@ -46,19 +46,32 @@ The code begins with getting arguments from the command line using the argparse 
 The constructor of the \textit{Cache} class takes every configurable parameter needed for the cache and creates an empty cache object. The data in the cache is represented by a Python dictionary structure. The top level keys are set indexes, each of which contains another dictionary keyed by ways. Every way's value is a Block object, which contains its own metadata, such as a \textit{dirty\_bit} and \textit{last\_accessed} time for LRU. 
 
 \paragraph{}
-The \textit{Cache} class contains \textit{read} and \textit{write} methods that are called during simulation.
+The \textit{Cache} class contains \textit{read} and \textit{write} methods that are called during simulation. The following figures depict the overall structure of this process. Note that when writing to next level, we are calling the next cache's write method recursively. The same goes for reading from the next level and getting back the response. In addition, the \textit{read} method will call \textit{write} if a block is being replaced. 
 
+\begin{figure}[htp!]
+\centering
+\includegraphics[scale=0.40]{write_diagram.eps}
+\caption{Overview of workflow for writing an address to cache}
+\label{}
+\end{figure}
 
+\begin{figure}[htp!]
+\centering
+\includegraphics[scale=0.40]{read_diagram.eps}
+\caption{Overview of workflow for reading an address from cache}
+\label{}
+\end{figure}
 
+\pagebreak
 \paragraph{}
-The simulation 
+The simulation and calculation of AMAT rely on the \textit{Response} objects. Response objects are created when an instruction is completed. They keep a record of the total time taken by the instruction and a trace of which levels of cache the instruction hit. 
 
 \section{Testing}
 \paragraph{}
-We tested the simulator with several different cache configurations and trace files as well as a stress test. The stress test is generated with a python script located in gen\_test/gen\_stress\_test.py and provides a large randomly generated trace file. 
+We tested the simulator with several different cache configurations and trace files as well as a stress test. The stress test is generated with a python script located in gen\_test/gen\_stress\_test.py and provides a large randomly generated trace file. These random instructions very rarely result in a hit, which demonstrates the functionality of caches. If stress test is run with our \textit{config\_simple\_multilevel} configuration, the AMAT for L1 is 1117 cycles as opposed to 1000 for memory alone. This shows that having poor hit rate and write allocate leads to an 11\% increase in time taken. There are many other configurations and trace files included with which to test. 
 
-\section{Evaluation}
+\section{Conclusion}
 \paragraph{}
-
+Writing this simulator greatly inforced the concepts of sets, ways, write back, write through and write allocate. 
 
 \end{document}

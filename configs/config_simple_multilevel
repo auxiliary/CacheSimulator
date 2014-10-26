@@ -11,9 +11,14 @@ cache_1: #required
   hit_time: 1 #cycles
 
 cache_2:
-  blocks: 32
+  blocks: 64
   associativity: 4
-  hit_time: 12
+  hit_time: 16
+
+cache_3:
+  blocks: 256
+  associativity: 8
+  hit_time: 100
 
 mem: #required
   hit_time: 1000 #cycles

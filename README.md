@@ -13,6 +13,16 @@ These can both be installed using pip:
 
     sudo pip install pyyaml/terminaltables
 
+### Running
+
+To run a quick test simulation, enter the src folder and run this command:
+
+    ./cache_simulator.py -pdc ../configs/config_simple_multilevel -t ../traces/trace2.txt
+
+For more details, run:
+
+    ./cache_simulator.py --help
+
 ### Goals
 
 This simulator will create a memory heirarchy from a YAML configuration file

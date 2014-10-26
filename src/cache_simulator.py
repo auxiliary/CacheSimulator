@@ -46,7 +46,7 @@ def main():
     trace = trace_file.read().splitlines()
     trace = [item for item in trace if not item.startswith('#')]
     logger.info('Loaded tracefile ' + arguments['trace_file'])
-    logger.info('Simulation!')
+    logger.info('Begin simulation!')
     simulate(hierarchy, trace, logger)
     if arguments['draw_cache']:
         for cache in hierarchy:
@@ -110,6 +110,8 @@ def print_cache(cache):
 #the given memory hierarchy to find AMAT
 def simulate(hierarchy, trace, logger):
     responses = []
+    #We only interface directly with L1. Reads and writes will automatically
+    #interact with lower levels of the hierarchy
     l1 = hierarchy['cache_1']
     for current_step in range(len(trace)):
         instruction = trace[current_step]
@@ -132,6 +134,7 @@ def simulate(hierarchy, trace, logger):
     analyze_results(hierarchy, responses, logger)
 
 def analyze_results(hierarchy, responses, logger):
+    #Parse all the responses from the simulation
     n_instructions = len(responses)
 
     total_time = 0
@@ -145,9 +148,12 @@ def analyze_results(hierarchy, responses, logger):
 
 def compute_amat(level, responses, logger, results={}):
     #Check if this is main memory
+    #Main memory has a non-variable hit time
     if not level.next_level:
         results[level.name] = level.hit_time
     else:
+        #Find out how many times this level of cache was accessed
+        #And how many of those accesses were misses
         n_miss = 0
         n_access = 0
         for r in responses:
@@ -158,6 +164,8 @@ def compute_amat(level, responses, logger, results={}):
 
         if n_access > 0:
             miss_rate = float(n_miss)/n_access
+            #Recursively compute the AMAT of this level of cache by computing
+            #the AMAT of lower levels
             results[level.name] = level.hit_time + miss_rate * compute_amat(level.next_level, responses, logger)[level.next_level.name] #wat
         else:
             results[level.name] = 0 * compute_amat(level.next_level, responses, logger)[level.next_level.name] #trust me, this is good
@@ -170,7 +178,9 @@ def compute_amat(level, responses, logger, results={}):
 
 
 def build_hierarchy(configs, logger):
+    #Build the cache hierarchy with the given configuration
     hierarchy = {}
+    #Main memory is required
     main_memory = build_cache(configs, 'mem', None, logger)
     prev_level = main_memory
     hierarchy['mem'] = main_memory
@@ -182,6 +192,7 @@ def build_hierarchy(configs, logger):
         cache_2 = build_cache(configs, 'cache_2', prev_level, logger)
         prev_level = cache_2
         hierarchy['cache_2'] = cache_2
+    #Cache_1 is required
     cache_1 = build_cache(configs, 'cache_1', prev_level, logger)
     hierarchy['cache_1'] = cache_1
     return hierarchy

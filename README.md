@@ -3,11 +3,11 @@ CacheSimulator
 
 A cache simulator in Python for CS 530
 
+Documentation on cache configuration and trace files are located in their respective folders
+
 ### Requirements
 
-CacheSimulator needs two extra Python modules
-
-    pyyaml and terminaltables
+CacheSimulator needs two extra Python modules: pyyaml and terminaltables
 
 These can both be installed using pip:
 
@@ -28,6 +28,4 @@ The memory heirarchy is configurable with the following features:
 - Optional L2 and L3 caches
 - Simulate write back and write through
 - Pretty print the cache layouts
-
-Still a work in progress!
 

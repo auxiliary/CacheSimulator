@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import yaml, cache, argparse, logging, pprint
-from terminaltables import UnixTable
+from terminaltables.other_tables import UnixTable
 
 def main():
     #Set up our arguments
